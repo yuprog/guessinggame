@@ -14,7 +14,7 @@ echo -n "$cnt. Enter how many files are in the current directory: "
 read guess
 echo -n "    Your answer is $guess. "
 
-let files=5
+let files=$(ls -l | wc -l)-1
 
 if [[ $guess =~ [^0-9.] ]] ; then
    echo "Only digits 0-9 are correct for answer."
