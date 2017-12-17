@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 # This is my own task script
+
+function getcurrentcat {
 echo "Hello! This is gussing game."
+echo -n "Current directory is "
+pwd
+}
+
 let cnt=0
 let guess=0
 let files=1
-echo -n "Current directory is "
-pwd
+
+getcurrentcat
 
 while [[ $guess -ne $files ]]
 do
@@ -23,7 +29,7 @@ else
      echo "This is correct answer!!! Congratulation!"
   elif [[ $guess -lt $files ]] ; then
      echo "Answer should be Greater."
-  else 
+  else
      echo "Answer should be Less."
   fi
 fi
